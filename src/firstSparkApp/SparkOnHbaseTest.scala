@@ -23,11 +23,11 @@ object SparkOnHbaseTest {
   //This is making a RDD of
   //(RowKey, columnFamily, columnQualifier, value)
   val rdd = sc.parallelize(Array(
-        (Bytes.toBytes("1"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("1")))),
-        (Bytes.toBytes("2"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("2")))),
-        (Bytes.toBytes("3"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("3")))),
-        (Bytes.toBytes("4"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("4")))),
-        (Bytes.toBytes("5"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("5"))))
+        (Bytes.toBytes("6"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("1") ),(Bytes.toBytes(columnFamily), Bytes.toBytes("outgoing"), Bytes.toBytes("1") ) ) ),
+        (Bytes.toBytes("7"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("2")),(Bytes.toBytes(columnFamily), Bytes.toBytes("ingoing"), Bytes.toBytes("1") ))),
+        (Bytes.toBytes("8"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("3")))),
+        (Bytes.toBytes("9"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("4")))),
+        (Bytes.toBytes("10"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("5"))))
        )
       )
    
@@ -35,7 +35,7 @@ object SparkOnHbaseTest {
   //Pass the HBase configs and SparkContext to the HBaseContext
   val conf = HBaseConfiguration.create()
 //      conf.addResource(new Path("/usr/lib/hbase/hbase-0.94.27/conf/core-site.xml"))
-      conf.addResource(new Path("/home/crazydog/hbase-0.98.12-hadoop2/conf/hbase-site.xml"))
+      conf.addResource(new Path("/usr/lib/hbase/conf/hbase-site.xml"))
   val hbaseContext = new HBaseContext(sc, conf)
   //Now give the rdd, table name, and a function that will convert a RDD record to a put, and finally
   // A flag if you want the puts to be batched
