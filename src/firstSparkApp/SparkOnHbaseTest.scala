@@ -19,15 +19,17 @@ object SparkOnHbaseTest {
   val sparkConf = new SparkConf().setAppName("first spark app!").setMaster("local[2]")
   val sc = new SparkContext(sparkConf)
   println("after=enter!!!!")
-  val columnFamily = "testColumn"
+  val columnFamily = "Cells"
   //This is making a RDD of
   //(RowKey, columnFamily, columnQualifier, value)
   val rdd = sc.parallelize(Array(
-        (Bytes.toBytes("6"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("1") ),(Bytes.toBytes(columnFamily), Bytes.toBytes("outgoing"), Bytes.toBytes("1") ) ) ),
-        (Bytes.toBytes("7"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("2")),(Bytes.toBytes(columnFamily), Bytes.toBytes("ingoing"), Bytes.toBytes("1") ))),
-        (Bytes.toBytes("8"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("3")))),
-        (Bytes.toBytes("9"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("4")))),
-        (Bytes.toBytes("10"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("1"), Bytes.toBytes("5"))))
+        (Bytes.toBytes("1"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("id"), Bytes.toBytes("2") ) ) ),
+        (Bytes.toBytes("2"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("324"), Bytes.toBytes("3")))),
+        (Bytes.toBytes("3"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("category"), Bytes.toBytes("4") ),(Bytes.toBytes(columnFamily), Bytes.toBytes("relate"), Bytes.toBytes("6") ) ) ),
+        (Bytes.toBytes("4"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("music"), Bytes.toBytes("5")))),
+        (Bytes.toBytes("5"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes(""), Bytes.toBytes("")))),
+        (Bytes.toBytes("6"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes("video"), Bytes.toBytes("7") ) ) ),
+        (Bytes.toBytes("7"), Array((Bytes.toBytes(columnFamily), Bytes.toBytes(""), Bytes.toBytes("")) ) )
        )
       )
    
@@ -50,7 +52,7 @@ object SparkOnHbaseTest {
 //    println(" --- qwe")
     println("before put")
     hbaseContext.bulkPut[(Array[Byte], Array[(Array[Byte], Array[Byte], Array[Byte])])](rdd,
-      "SparkTest",
+      "TestGraph",
       //This function is really important because it allows our source RDD to have data of any type
       // Also because puts are not serializable
       (putRecord) => {
