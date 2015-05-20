@@ -1,91 +1,21 @@
-15/05/05 16:48:35.572 main INFO SparkContext: Running Spark version 1.3.1
-15/05/05 16:48:35.593 main WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 145.94.146.135 instead (on interface wlan0)
-15/05/05 16:48:35.594 main WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
-15/05/05 16:48:41.013 main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-15/05/05 16:48:41.128 main INFO SecurityManager: Changing view acls to: crazydog
-15/05/05 16:48:41.128 main INFO SecurityManager: Changing modify acls to: crazydog
-15/05/05 16:48:41.128 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(crazydog); users with modify permissions: Set(crazydog)
-15/05/05 16:48:41.491 sparkDriver-akka.actor.default-dispatcher-2 INFO Slf4jLogger: Slf4jLogger started
-15/05/05 16:48:41.564 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Starting remoting
-15/05/05 16:48:41.691 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@wlan-145-94-146-135.wlan.tudelft.nl:41131]
-15/05/05 16:48:41.698 main INFO Utils: Successfully started service 'sparkDriver' on port 41131.
-15/05/05 16:48:41.717 main INFO SparkEnv: Registering MapOutputTracker
-15/05/05 16:48:41.726 main INFO SparkEnv: Registering BlockManagerMaster
-15/05/05 16:48:41.748 main INFO DiskBlockManager: Created local directory at /tmp/spark-04ebe598-02a3-4486-8de2-ca2279f76ea1/blockmgr-45390651-8116-478f-baa3-69dfaf0753a9
-15/05/05 16:48:41.752 main INFO MemoryStore: MemoryStore started with capacity 922.6 MB
-15/05/05 16:48:41.830 main INFO HttpFileServer: HTTP File server directory is /tmp/spark-8d1ff1de-ca53-45e2-ada8-218e3271e8ca/httpd-c51ee79e-dc81-41ab-b837-0b6b7aa3788d
-15/05/05 16:48:41.833 main INFO HttpServer: Starting HTTP Server
-15/05/05 16:48:41.874 main INFO Server: jetty-8.y.z-SNAPSHOT
-15/05/05 16:48:41.885 main INFO AbstractConnector: Started SocketConnector@0.0.0.0:43167
-15/05/05 16:48:41.885 main INFO Utils: Successfully started service 'HTTP file server' on port 43167.
-15/05/05 16:48:41.895 main INFO SparkEnv: Registering OutputCommitCoordinator
-15/05/05 16:48:46.994 main INFO Server: jetty-8.y.z-SNAPSHOT
-15/05/05 16:48:47.002 main INFO AbstractConnector: Started SelectChannelConnector@0.0.0.0:4040
-15/05/05 16:48:47.002 main INFO Utils: Successfully started service 'SparkUI' on port 4040.
-15/05/05 16:48:47.003 main INFO SparkUI: Started SparkUI at http://wlan-145-94-146-135.wlan.tudelft.nl:4040
-15/05/05 16:48:47.071 sparkDriver-akka.actor.default-dispatcher-3 INFO Executor: Starting executor ID <driver> on host localhost
-15/05/05 16:48:47.082 sparkDriver-akka.actor.default-dispatcher-3 INFO AkkaUtils: Connecting to HeartbeatReceiver: akka.tcp://sparkDriver@wlan-145-94-146-135.wlan.tudelft.nl:41131/user/HeartbeatReceiver
-15/05/05 16:48:47.189 main INFO NettyBlockTransferService: Server created on 46188
-15/05/05 16:48:47.190 main INFO BlockManagerMaster: Trying to register BlockManager
-15/05/05 16:48:47.192 sparkDriver-akka.actor.default-dispatcher-3 INFO BlockManagerMasterActor: Registering block manager localhost:46188 with 922.6 MB RAM, BlockManagerId(<driver>, localhost, 46188)
-15/05/05 16:48:47.193 main INFO BlockManagerMaster: Registered BlockManager
-15/05/05 16:48:47.459 main INFO SparkContext: Starting job: collect at RDDTest.scala:12
-15/05/05 16:48:47.479 dag-scheduler-event-loop INFO DAGScheduler: Got job 0 (collect at RDDTest.scala:12) with 3 output partitions (allowLocal=false)
-15/05/05 16:48:47.480 dag-scheduler-event-loop INFO DAGScheduler: Final stage: Stage 0(collect at RDDTest.scala:12)
-15/05/05 16:48:47.480 dag-scheduler-event-loop INFO DAGScheduler: Parents of final stage: List()
-15/05/05 16:48:47.484 dag-scheduler-event-loop INFO DAGScheduler: Missing parents: List()
-15/05/05 16:48:47.488 dag-scheduler-event-loop INFO DAGScheduler: Submitting Stage 0 (ParallelCollectionRDD[0] at parallelize at RDDTest.scala:10), which has no missing parents
-15/05/05 16:48:47.570 dag-scheduler-event-loop INFO MemoryStore: ensureFreeSpace(1112) called with curMem=0, maxMem=967405731
-15/05/05 16:48:47.571 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 1112.0 B, free 922.6 MB)
-15/05/05 16:48:47.578 dag-scheduler-event-loop INFO MemoryStore: ensureFreeSpace(816) called with curMem=1112, maxMem=967405731
-15/05/05 16:48:47.578 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 816.0 B, free 922.6 MB)
-15/05/05 16:48:47.580 sparkDriver-akka.actor.default-dispatcher-3 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:46188 (size: 816.0 B, free: 922.6 MB)
-15/05/05 16:48:47.581 dag-scheduler-event-loop INFO BlockManagerMaster: Updated info of block broadcast_0_piece0
-15/05/05 16:48:47.583 dag-scheduler-event-loop INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:839
-15/05/05 16:48:47.586 dag-scheduler-event-loop INFO DAGScheduler: Submitting 3 missing tasks from Stage 0 (ParallelCollectionRDD[0] at parallelize at RDDTest.scala:10)
-15/05/05 16:48:47.587 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 0.0 with 3 tasks
-15/05/05 16:48:47.618 sparkDriver-akka.actor.default-dispatcher-3 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 1539 bytes)
-15/05/05 16:48:47.620 sparkDriver-akka.actor.default-dispatcher-3 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 1519 bytes)
-15/05/05 16:48:47.621 sparkDriver-akka.actor.default-dispatcher-3 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, PROCESS_LOCAL, 1535 bytes)
-15/05/05 16:48:47.623 Executor task launch worker-2 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
-15/05/05 16:48:47.623 Executor task launch worker-0 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
-15/05/05 16:48:47.623 Executor task launch worker-1 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
-15/05/05 16:48:47.647 Executor task launch worker-1 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 880 bytes result sent to driver
-15/05/05 16:48:47.647 Executor task launch worker-2 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 896 bytes result sent to driver
-15/05/05 16:48:47.647 Executor task launch worker-0 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 900 bytes result sent to driver
-15/05/05 16:48:47.654 task-result-getter-0 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 31 ms on localhost (1/3)
-15/05/05 16:48:47.656 task-result-getter-1 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 34 ms on localhost (2/3)
-15/05/05 16:48:47.657 task-result-getter-2 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 52 ms on localhost (3/3)
-15/05/05 16:48:47.658 dag-scheduler-event-loop INFO DAGScheduler: Stage 0 (collect at RDDTest.scala:12) finished in 0.064 s
-15/05/05 16:48:47.658 task-result-getter-2 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
-15/05/05 16:48:47.664 main INFO DAGScheduler: Job 0 finished: collect at RDDTest.scala:12, took 0.204286 s
-15/05/05 16:48:47.682 main INFO SparkContext: Starting job: collect at RDDTest.scala:15
-15/05/05 16:48:47.683 dag-scheduler-event-loop INFO DAGScheduler: Got job 1 (collect at RDDTest.scala:15) with 3 output partitions (allowLocal=false)
-15/05/05 16:48:47.683 dag-scheduler-event-loop INFO DAGScheduler: Final stage: Stage 1(collect at RDDTest.scala:15)
-15/05/05 16:48:47.683 dag-scheduler-event-loop INFO DAGScheduler: Parents of final stage: List()
-15/05/05 16:48:47.685 dag-scheduler-event-loop INFO DAGScheduler: Missing parents: List()
-15/05/05 16:48:47.685 dag-scheduler-event-loop INFO DAGScheduler: Submitting Stage 1 (MapPartitionsRDD[2] at flatMap at RDDTest.scala:15), which has no missing parents
-15/05/05 16:48:47.687 dag-scheduler-event-loop INFO MemoryStore: ensureFreeSpace(1752) called with curMem=1928, maxMem=967405731
-15/05/05 16:48:47.688 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 1752.0 B, free 922.6 MB)
-15/05/05 16:48:47.689 dag-scheduler-event-loop INFO MemoryStore: ensureFreeSpace(1245) called with curMem=3680, maxMem=967405731
-15/05/05 16:48:47.690 dag-scheduler-event-loop INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 1245.0 B, free 922.6 MB)
-15/05/05 16:48:47.691 sparkDriver-akka.actor.default-dispatcher-3 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:46188 (size: 1245.0 B, free: 922.6 MB)
-15/05/05 16:48:47.691 dag-scheduler-event-loop INFO BlockManagerMaster: Updated info of block broadcast_1_piece0
-15/05/05 16:48:47.692 dag-scheduler-event-loop INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:839
-15/05/05 16:48:47.693 dag-scheduler-event-loop INFO DAGScheduler: Submitting 3 missing tasks from Stage 1 (MapPartitionsRDD[2] at flatMap at RDDTest.scala:15)
-15/05/05 16:48:47.693 dag-scheduler-event-loop INFO TaskSchedulerImpl: Adding task set 1.0 with 3 tasks
-15/05/05 16:48:47.696 sparkDriver-akka.actor.default-dispatcher-3 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 3, localhost, PROCESS_LOCAL, 1539 bytes)
-15/05/05 16:48:47.697 sparkDriver-akka.actor.default-dispatcher-3 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 4, localhost, PROCESS_LOCAL, 1519 bytes)
-15/05/05 16:48:47.698 sparkDriver-akka.actor.default-dispatcher-3 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 5, localhost, PROCESS_LOCAL, 1535 bytes)
-15/05/05 16:48:47.699 Executor task launch worker-1 INFO Executor: Running task 0.0 in stage 1.0 (TID 3)
-15/05/05 16:48:47.699 Executor task launch worker-2 INFO Executor: Running task 1.0 in stage 1.0 (TID 4)
-15/05/05 16:48:47.703 Executor task launch worker-0 INFO Executor: Running task 2.0 in stage 1.0 (TID 5)
-15/05/05 16:48:47.704 Executor task launch worker-2 INFO Executor: Finished task 1.0 in stage 1.0 (TID 4). 868 bytes result sent to driver
-15/05/05 16:48:47.707 Executor task launch worker-0 INFO Executor: Finished task 2.0 in stage 1.0 (TID 5). 884 bytes result sent to driver
-15/05/05 16:48:47.708 Executor task launch worker-1 INFO Executor: Finished task 0.0 in stage 1.0 (TID 3). 888 bytes result sent to driver
-15/05/05 16:48:47.710 task-result-getter-3 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 4) in 13 ms on localhost (1/3)
-15/05/05 16:48:47.711 task-result-getter-0 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 5) in 13 ms on localhost (2/3)
-15/05/05 16:48:47.712 task-result-getter-1 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 3) in 17 ms on localhost (3/3)
-15/05/05 16:48:47.712 dag-scheduler-event-loop INFO DAGScheduler: Stage 1 (collect at RDDTest.scala:15) finished in 0.008 s
-15/05/05 16:48:47.712 task-result-getter-1 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
-15/05/05 16:48:47.712 main INFO DAGScheduler: Job 1 finished: collect at RDDTest.scala:15, took 0.030591 s
+15/05/19 17:14:01.169 main INFO SparkContext: Running Spark version 1.3.1
+15/05/19 17:14:01.193 main WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 145.94.195.151 instead (on interface wlan0)
+15/05/19 17:14:01.194 main WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+15/05/19 17:14:01.691 main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15/05/19 17:14:01.834 main INFO SecurityManager: Changing view acls to: crazydog
+15/05/19 17:14:01.835 main INFO SecurityManager: Changing modify acls to: crazydog
+15/05/19 17:14:01.835 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(crazydog); users with modify permissions: Set(crazydog)
+15/05/19 17:14:02.205 sparkDriver-akka.actor.default-dispatcher-2 INFO Slf4jLogger: Slf4jLogger started
+15/05/19 17:14:02.280 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Starting remoting
+15/05/19 17:14:02.411 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@wlan-145-94-195-151.wlan.tudelft.nl:45976]
+15/05/19 17:14:02.416 main INFO Utils: Successfully started service 'sparkDriver' on port 45976.
+15/05/19 17:14:02.434 main INFO SparkEnv: Registering MapOutputTracker
+15/05/19 17:14:02.443 main INFO SparkEnv: Registering BlockManagerMaster
+15/05/19 17:14:02.454 main INFO DiskBlockManager: Created local directory at /tmp/spark-0cc81af7-f1ce-4c50-95fd-fd9608eb14d5/blockmgr-46a03967-610d-4fee-8a7d-78e532e4031a
+15/05/19 17:14:02.456 main INFO MemoryStore: MemoryStore started with capacity 922.6 MB
+15/05/19 17:14:02.522 main INFO HttpFileServer: HTTP File server directory is /tmp/spark-1388908a-3ac8-4282-a30d-1f4813d03996/httpd-2ef99e62-3304-4eb4-ab9c-847493f39972
+15/05/19 17:14:02.525 main INFO HttpServer: Starting HTTP Server
+15/05/19 17:14:02.563 main INFO Server: jetty-8.y.z-SNAPSHOT
+15/05/19 17:14:02.581 main INFO AbstractConnector: Started SocketConnector@0.0.0.0:46276
+15/05/19 17:14:02.582 main INFO Utils: Successfully started service 'HTTP file server' on port 46276.
+15/05/19 17:14:02.591 main INFO SparkEnv: Registering OutputCommitCoordinator
