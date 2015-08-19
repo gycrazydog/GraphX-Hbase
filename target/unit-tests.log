@@ -1,21 +1,272 @@
-15/05/19 17:14:01.169 main INFO SparkContext: Running Spark version 1.3.1
-15/05/19 17:14:01.193 main WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 145.94.195.151 instead (on interface wlan0)
-15/05/19 17:14:01.194 main WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
-15/05/19 17:14:01.691 main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-15/05/19 17:14:01.834 main INFO SecurityManager: Changing view acls to: crazydog
-15/05/19 17:14:01.835 main INFO SecurityManager: Changing modify acls to: crazydog
-15/05/19 17:14:01.835 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(crazydog); users with modify permissions: Set(crazydog)
-15/05/19 17:14:02.205 sparkDriver-akka.actor.default-dispatcher-2 INFO Slf4jLogger: Slf4jLogger started
-15/05/19 17:14:02.280 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Starting remoting
-15/05/19 17:14:02.411 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@wlan-145-94-195-151.wlan.tudelft.nl:45976]
-15/05/19 17:14:02.416 main INFO Utils: Successfully started service 'sparkDriver' on port 45976.
-15/05/19 17:14:02.434 main INFO SparkEnv: Registering MapOutputTracker
-15/05/19 17:14:02.443 main INFO SparkEnv: Registering BlockManagerMaster
-15/05/19 17:14:02.454 main INFO DiskBlockManager: Created local directory at /tmp/spark-0cc81af7-f1ce-4c50-95fd-fd9608eb14d5/blockmgr-46a03967-610d-4fee-8a7d-78e532e4031a
-15/05/19 17:14:02.456 main INFO MemoryStore: MemoryStore started with capacity 922.6 MB
-15/05/19 17:14:02.522 main INFO HttpFileServer: HTTP File server directory is /tmp/spark-1388908a-3ac8-4282-a30d-1f4813d03996/httpd-2ef99e62-3304-4eb4-ab9c-847493f39972
-15/05/19 17:14:02.525 main INFO HttpServer: Starting HTTP Server
-15/05/19 17:14:02.563 main INFO Server: jetty-8.y.z-SNAPSHOT
-15/05/19 17:14:02.581 main INFO AbstractConnector: Started SocketConnector@0.0.0.0:46276
-15/05/19 17:14:02.582 main INFO Utils: Successfully started service 'HTTP file server' on port 46276.
-15/05/19 17:14:02.591 main INFO SparkEnv: Registering OutputCommitCoordinator
+15/06/12 16:10:47.214 main WARN Utils: Your hostname, ubuntu resolves to a loopback address: 127.0.1.1; using 145.94.146.62 instead (on interface wlan0)
+15/06/12 16:10:47.215 main WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+15/06/12 16:10:47.266 main INFO SecurityManager: Changing view acls to: crazydog
+15/06/12 16:10:47.267 main INFO SecurityManager: Changing modify acls to: crazydog
+15/06/12 16:10:47.267 main INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(crazydog); users with modify permissions: Set(crazydog)
+15/06/12 16:10:47.743 sparkDriver-akka.actor.default-dispatcher-2 INFO Slf4jLogger: Slf4jLogger started
+15/06/12 16:10:47.787 sparkDriver-akka.actor.default-dispatcher-3 INFO Remoting: Starting remoting
+15/06/12 16:10:47.913 sparkDriver-akka.actor.default-dispatcher-2 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@wlan-145-94-146-62.wlan.tudelft.nl:42237]
+15/06/12 16:10:47.915 sparkDriver-akka.actor.default-dispatcher-4 INFO Remoting: Remoting now listens on addresses: [akka.tcp://sparkDriver@wlan-145-94-146-62.wlan.tudelft.nl:42237]
+15/06/12 16:10:47.923 main INFO Utils: Successfully started service 'sparkDriver' on port 42237.
+15/06/12 16:10:47.937 main INFO SparkEnv: Registering MapOutputTracker
+15/06/12 16:10:47.946 main INFO SparkEnv: Registering BlockManagerMaster
+15/06/12 16:10:47.960 main INFO DiskBlockManager: Created local directory at /tmp/spark-local-20150612161047-39e7
+15/06/12 16:10:47.963 main INFO MemoryStore: MemoryStore started with capacity 922.6 MB
+15/06/12 16:10:48.177 main WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15/06/12 16:10:48.331 main INFO HttpFileServer: HTTP File server directory is /tmp/spark-790b6ff9-0350-4ea6-b33e-1ff9cc8f540b
+15/06/12 16:10:48.336 main INFO HttpServer: Starting HTTP Server
+15/06/12 16:10:48.396 main INFO Utils: Successfully started service 'HTTP file server' on port 60856.
+15/06/12 16:10:53.878 main INFO Utils: Successfully started service 'SparkUI' on port 4040.
+15/06/12 16:10:53.882 main INFO SparkUI: Started SparkUI at http://wlan-145-94-146-62.wlan.tudelft.nl:4040
+15/06/12 16:10:53.983 sparkDriver-akka.actor.default-dispatcher-13 INFO AkkaUtils: Connecting to HeartbeatReceiver: akka.tcp://sparkDriver@wlan-145-94-146-62.wlan.tudelft.nl:42237/user/HeartbeatReceiver
+15/06/12 16:10:54.082 main INFO NettyBlockTransferService: Server created on 34243
+15/06/12 16:10:54.088 main INFO BlockManagerMaster: Trying to register BlockManager
+15/06/12 16:10:54.089 sparkDriver-akka.actor.default-dispatcher-13 INFO BlockManagerMasterActor: Registering block manager localhost:34243 with 922.6 MB RAM, BlockManagerId(<driver>, localhost, 34243)
+15/06/12 16:10:54.091 main INFO BlockManagerMaster: Registered BlockManager
+15/06/12 16:10:54.501 main INFO SparkContext: Starting job: collect at SparkReadHbase.scala:36
+15/06/12 16:10:54.516 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Got job 0 (collect at SparkReadHbase.scala:36) with 4 output partitions (allowLocal=false)
+15/06/12 16:10:54.516 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Final stage: Stage 0(collect at SparkReadHbase.scala:36)
+15/06/12 16:10:54.517 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Parents of final stage: List()
+15/06/12 16:10:54.523 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Missing parents: List()
+15/06/12 16:10:54.529 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Submitting Stage 0 (MappedRDD[15] at map at SparkReadHbase.scala:36), which has no missing parents
+15/06/12 16:10:54.600 sparkDriver-akka.actor.default-dispatcher-13 INFO MemoryStore: ensureFreeSpace(3296) called with curMem=0, maxMem=967405731
+15/06/12 16:10:54.602 sparkDriver-akka.actor.default-dispatcher-13 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 3.2 KB, free 922.6 MB)
+15/06/12 16:10:54.743 sparkDriver-akka.actor.default-dispatcher-13 INFO MemoryStore: ensureFreeSpace(1854) called with curMem=3296, maxMem=967405731
+15/06/12 16:10:54.744 sparkDriver-akka.actor.default-dispatcher-13 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1854.0 B, free 922.6 MB)
+15/06/12 16:10:54.745 sparkDriver-akka.actor.default-dispatcher-4 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:34243 (size: 1854.0 B, free: 922.6 MB)
+15/06/12 16:10:54.746 sparkDriver-akka.actor.default-dispatcher-13 INFO BlockManagerMaster: Updated info of block broadcast_0_piece0
+15/06/12 16:10:54.748 sparkDriver-akka.actor.default-dispatcher-13 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:838
+15/06/12 16:10:54.765 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Submitting 4 missing tasks from Stage 0 (MappedRDD[15] at map at SparkReadHbase.scala:36)
+15/06/12 16:10:54.765 sparkDriver-akka.actor.default-dispatcher-13 INFO TaskSchedulerImpl: Adding task set 0.0 with 4 tasks
+15/06/12 16:10:54.783 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 1274 bytes)
+15/06/12 16:10:54.788 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 1390 bytes)
+15/06/12 16:10:54.789 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, PROCESS_LOCAL, 1395 bytes)
+15/06/12 16:10:54.790 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, PROCESS_LOCAL, 1385 bytes)
+15/06/12 16:10:54.793 Executor task launch worker-0 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+15/06/12 16:10:54.795 Executor task launch worker-1 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+15/06/12 16:10:54.796 Executor task launch worker-2 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+15/06/12 16:10:54.796 Executor task launch worker-3 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+15/06/12 16:10:54.839 Executor task launch worker-0 INFO CacheManager: Partition rdd_2_0 not found, computing it
+15/06/12 16:10:54.840 Executor task launch worker-2 INFO CacheManager: Partition rdd_2_2 not found, computing it
+15/06/12 16:10:54.839 Executor task launch worker-3 INFO CacheManager: Partition rdd_2_3 not found, computing it
+15/06/12 16:10:54.840 Executor task launch worker-1 INFO CacheManager: Partition rdd_2_1 not found, computing it
+15/06/12 16:10:54.908 Executor task launch worker-0 INFO MemoryStore: ensureFreeSpace(2544) called with curMem=5150, maxMem=967405731
+15/06/12 16:10:54.908 Executor task launch worker-0 INFO MemoryStore: Block rdd_2_0 stored as values in memory (estimated size 2.5 KB, free 922.6 MB)
+15/06/12 16:10:54.909 sparkDriver-akka.actor.default-dispatcher-4 INFO BlockManagerInfo: Added rdd_2_0 in memory on localhost:34243 (size: 2.5 KB, free: 922.6 MB)
+15/06/12 16:10:54.910 Executor task launch worker-0 INFO BlockManagerMaster: Updated info of block rdd_2_0
+15/06/12 16:10:54.911 Executor task launch worker-1 INFO MemoryStore: ensureFreeSpace(2648) called with curMem=7694, maxMem=967405731
+15/06/12 16:10:54.912 Executor task launch worker-1 INFO MemoryStore: Block rdd_2_1 stored as values in memory (estimated size 2.6 KB, free 922.6 MB)
+15/06/12 16:10:54.912 Executor task launch worker-3 INFO MemoryStore: ensureFreeSpace(2640) called with curMem=10342, maxMem=967405731
+15/06/12 16:10:54.913 Executor task launch worker-3 INFO MemoryStore: Block rdd_2_3 stored as values in memory (estimated size 2.6 KB, free 922.6 MB)
+15/06/12 16:10:54.913 sparkDriver-akka.actor.default-dispatcher-4 INFO BlockManagerInfo: Added rdd_2_1 in memory on localhost:34243 (size: 2.6 KB, free: 922.6 MB)
+15/06/12 16:10:54.914 Executor task launch worker-1 INFO BlockManagerMaster: Updated info of block rdd_2_1
+15/06/12 16:10:54.914 Executor task launch worker-2 INFO MemoryStore: ensureFreeSpace(2664) called with curMem=12982, maxMem=967405731
+15/06/12 16:10:54.914 sparkDriver-akka.actor.default-dispatcher-4 INFO BlockManagerInfo: Added rdd_2_3 in memory on localhost:34243 (size: 2.6 KB, free: 922.6 MB)
+15/06/12 16:10:54.915 Executor task launch worker-2 INFO MemoryStore: Block rdd_2_2 stored as values in memory (estimated size 2.6 KB, free 922.6 MB)
+15/06/12 16:10:54.915 Executor task launch worker-3 INFO BlockManagerMaster: Updated info of block rdd_2_3
+15/06/12 16:10:54.916 sparkDriver-akka.actor.default-dispatcher-4 INFO BlockManagerInfo: Added rdd_2_2 in memory on localhost:34243 (size: 2.6 KB, free: 922.6 MB)
+15/06/12 16:10:54.916 Executor task launch worker-2 INFO BlockManagerMaster: Updated info of block rdd_2_2
+15/06/12 16:10:54.923 Executor task launch worker-2 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 1230 bytes result sent to driver
+15/06/12 16:10:54.923 Executor task launch worker-0 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1230 bytes result sent to driver
+15/06/12 16:10:54.924 Executor task launch worker-1 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1241 bytes result sent to driver
+15/06/12 16:10:54.924 Executor task launch worker-3 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1236 bytes result sent to driver
+15/06/12 16:10:54.929 task-result-getter-0 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 139 ms on localhost (1/4)
+15/06/12 16:10:54.930 task-result-getter-2 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 142 ms on localhost (2/4)
+15/06/12 16:10:54.930 task-result-getter-1 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 152 ms on localhost (3/4)
+15/06/12 16:10:54.936 task-result-getter-3 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 146 ms on localhost (4/4)
+15/06/12 16:10:54.937 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Stage 0 (collect at SparkReadHbase.scala:36) finished in 0.165 s
+15/06/12 16:10:54.938 task-result-getter-3 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+15/06/12 16:10:54.942 main INFO DAGScheduler: Job 0 finished: collect at SparkReadHbase.scala:36, took 0.440904 s
+15/06/12 16:10:54.993 main INFO MemoryStore: ensureFreeSpace(262997) called with curMem=15646, maxMem=967405731
+15/06/12 16:10:54.994 main INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 256.8 KB, free 922.3 MB)
+15/06/12 16:10:55.047 main INFO MemoryStore: ensureFreeSpace(18882) called with curMem=278643, maxMem=967405731
+15/06/12 16:10:55.048 main INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 18.4 KB, free 922.3 MB)
+15/06/12 16:10:55.049 sparkDriver-akka.actor.default-dispatcher-13 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:34243 (size: 18.4 KB, free: 922.6 MB)
+15/06/12 16:10:55.050 main INFO BlockManagerMaster: Updated info of block broadcast_1_piece0
+15/06/12 16:10:55.051 main INFO SparkContext: Created broadcast 1 from broadcast at HBaseContext.scala:69
+15/06/12 16:10:55.053 main INFO MemoryStore: ensureFreeSpace(192) called with curMem=297525, maxMem=967405731
+15/06/12 16:10:55.054 main INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 192.0 B, free 922.3 MB)
+15/06/12 16:10:55.056 main INFO MemoryStore: ensureFreeSpace(120) called with curMem=297717, maxMem=967405731
+15/06/12 16:10:55.057 main INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 120.0 B, free 922.3 MB)
+15/06/12 16:10:55.058 sparkDriver-akka.actor.default-dispatcher-13 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:34243 (size: 120.0 B, free: 922.6 MB)
+15/06/12 16:10:55.058 main INFO BlockManagerMaster: Updated info of block broadcast_2_piece0
+15/06/12 16:10:55.060 main INFO SparkContext: Created broadcast 2 from broadcast at HBaseContext.scala:70
+15/06/12 16:10:55.118 main INFO SparkContext: Starting job: count at SparkReadHbase.scala:41
+15/06/12 16:10:55.122 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Registering RDD 22 (repartition at SparkReadHbase.scala:38)
+15/06/12 16:10:55.123 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Got job 1 (count at SparkReadHbase.scala:41) with 4 output partitions (allowLocal=false)
+15/06/12 16:10:55.123 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Final stage: Stage 2(count at SparkReadHbase.scala:41)
+15/06/12 16:10:55.123 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Parents of final stage: List(Stage 1)
+15/06/12 16:10:55.125 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Missing parents: List(Stage 1)
+15/06/12 16:10:55.141 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Submitting Stage 1 (MapPartitionsRDD[22] at repartition at SparkReadHbase.scala:38), which has no missing parents
+15/06/12 16:10:55.151 sparkDriver-akka.actor.default-dispatcher-13 INFO MemoryStore: ensureFreeSpace(5976) called with curMem=297837, maxMem=967405731
+15/06/12 16:10:55.152 sparkDriver-akka.actor.default-dispatcher-13 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 5.8 KB, free 922.3 MB)
+15/06/12 16:10:55.153 sparkDriver-akka.actor.default-dispatcher-13 INFO MemoryStore: ensureFreeSpace(3183) called with curMem=303813, maxMem=967405731
+15/06/12 16:10:55.154 sparkDriver-akka.actor.default-dispatcher-13 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.1 KB, free 922.3 MB)
+15/06/12 16:10:55.154 sparkDriver-akka.actor.default-dispatcher-4 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:34243 (size: 3.1 KB, free: 922.6 MB)
+15/06/12 16:10:55.155 sparkDriver-akka.actor.default-dispatcher-13 INFO BlockManagerMaster: Updated info of block broadcast_3_piece0
+15/06/12 16:10:55.156 sparkDriver-akka.actor.default-dispatcher-13 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:838
+15/06/12 16:10:55.166 sparkDriver-akka.actor.default-dispatcher-13 INFO DAGScheduler: Submitting 16 missing tasks from Stage 1 (MapPartitionsRDD[22] at repartition at SparkReadHbase.scala:38)
+15/06/12 16:10:55.166 sparkDriver-akka.actor.default-dispatcher-13 INFO TaskSchedulerImpl: Adding task set 1.0 with 16 tasks
+15/06/12 16:10:55.172 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 4, localhost, PROCESS_LOCAL, 1579 bytes)
+15/06/12 16:10:55.173 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 5, localhost, PROCESS_LOCAL, 1594 bytes)
+15/06/12 16:10:55.175 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 6, localhost, PROCESS_LOCAL, 1585 bytes)
+15/06/12 16:10:55.176 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 7, localhost, PROCESS_LOCAL, 1597 bytes)
+15/06/12 16:10:55.176 Executor task launch worker-3 INFO Executor: Running task 0.0 in stage 1.0 (TID 4)
+15/06/12 16:10:55.176 Executor task launch worker-1 INFO Executor: Running task 1.0 in stage 1.0 (TID 5)
+15/06/12 16:10:55.177 Executor task launch worker-0 INFO Executor: Running task 2.0 in stage 1.0 (TID 6)
+15/06/12 16:10:55.180 Executor task launch worker-2 INFO Executor: Running task 3.0 in stage 1.0 (TID 7)
+15/06/12 16:10:55.188 Executor task launch worker-3 INFO BlockManager: Found block rdd_2_0 locally
+15/06/12 16:10:55.189 Executor task launch worker-0 INFO BlockManager: Found block rdd_2_0 locally
+15/06/12 16:10:55.188 Executor task launch worker-1 INFO BlockManager: Found block rdd_2_0 locally
+15/06/12 16:10:55.191 Executor task launch worker-2 INFO BlockManager: Found block rdd_2_0 locally
+15/06/12 16:10:55.220 Executor task launch worker-3 INFO Executor: Finished task 0.0 in stage 1.0 (TID 4). 1898 bytes result sent to driver
+15/06/12 16:10:55.220 Executor task launch worker-2 INFO Executor: Finished task 3.0 in stage 1.0 (TID 7). 1898 bytes result sent to driver
+15/06/12 16:10:55.220 Executor task launch worker-0 INFO Executor: Finished task 2.0 in stage 1.0 (TID 6). 1898 bytes result sent to driver
+15/06/12 16:10:55.220 Executor task launch worker-1 INFO Executor: Finished task 1.0 in stage 1.0 (TID 5). 1898 bytes result sent to driver
+15/06/12 16:10:55.222 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 8, localhost, PROCESS_LOCAL, 1695 bytes)
+15/06/12 16:10:55.226 Executor task launch worker-1 INFO Executor: Running task 4.0 in stage 1.0 (TID 8)
+15/06/12 16:10:55.227 task-result-getter-0 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 4) in 54 ms on localhost (1/16)
+15/06/12 16:10:55.231 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 9, localhost, PROCESS_LOCAL, 1710 bytes)
+15/06/12 16:10:55.232 task-result-getter-2 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 7) in 56 ms on localhost (2/16)
+15/06/12 16:10:55.233 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 10, localhost, PROCESS_LOCAL, 1701 bytes)
+15/06/12 16:10:55.234 Executor task launch worker-0 INFO Executor: Running task 5.0 in stage 1.0 (TID 9)
+15/06/12 16:10:55.235 sparkDriver-akka.actor.default-dispatcher-4 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 11, localhost, PROCESS_LOCAL, 1713 bytes)
+15/06/12 16:10:55.236 task-result-getter-1 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 6) in 61 ms on localhost (3/16)
+15/06/12 16:10:55.237 task-result-getter-3 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 5) in 64 ms on localhost (4/16)
+15/06/12 16:10:55.237 Executor task launch worker-3 INFO Executor: Running task 7.0 in stage 1.0 (TID 11)
+15/06/12 16:10:55.237 Executor task launch worker-2 INFO Executor: Running task 6.0 in stage 1.0 (TID 10)
+15/06/12 16:10:55.242 Executor task launch worker-1 INFO BlockManager: Found block rdd_2_1 locally
+15/06/12 16:10:55.243 Executor task launch worker-0 INFO BlockManager: Found block rdd_2_1 locally
+15/06/12 16:10:55.244 Executor task launch worker-1 INFO CacheManager: Partition rdd_19_0 not found, computing it
+15/06/12 16:10:55.244 Executor task launch worker-0 INFO CacheManager: Partition rdd_19_1 not found, computing it
+15/06/12 16:10:55.246 Executor task launch worker-1 INFO HBaseContext: appliedCredentials:false,credentials:null
+15/06/12 16:10:55.246 Executor task launch worker-0 INFO HBaseContext: appliedCredentials:false,credentials:null
+15/06/12 16:10:55.250 Executor task launch worker-2 INFO BlockManager: Found block rdd_2_1 locally
+15/06/12 16:10:55.253 Executor task launch worker-2 INFO CacheManager: Partition rdd_19_2 not found, computing it
+15/06/12 16:10:55.254 Executor task launch worker-2 INFO HBaseContext: appliedCredentials:false,credentials:null
+15/06/12 16:10:55.254 Executor task launch worker-3 INFO BlockManager: Found block rdd_2_1 locally
+15/06/12 16:10:55.255 Executor task launch worker-3 INFO CacheManager: Partition rdd_19_3 not found, computing it
+15/06/12 16:10:55.256 Executor task launch worker-3 INFO HBaseContext: appliedCredentials:false,credentials:null
+15/06/12 16:10:55.374 Executor task launch worker-3 INFO RecoverableZooKeeper: Process identifier=hconnection-0x21d332bb connecting to ZooKeeper ensemble=localhost:2181
+15/06/12 16:10:55.374 Executor task launch worker-1 INFO RecoverableZooKeeper: Process identifier=hconnection-0x4e16230e connecting to ZooKeeper ensemble=localhost:2181
+15/06/12 16:10:55.374 Executor task launch worker-2 INFO RecoverableZooKeeper: Process identifier=hconnection-0x1560eb09 connecting to ZooKeeper ensemble=localhost:2181
+15/06/12 16:10:55.377 Executor task launch worker-0 INFO RecoverableZooKeeper: Process identifier=hconnection-0xde6a6d6 connecting to ZooKeeper ensemble=localhost:2181
+15/06/12 16:10:55.382 Executor task launch worker-2 INFO ZooKeeper: Client environment:zookeeper.version=3.4.5-cdh5.3.0--1, built on 12/17/2014 02:45 GMT
+15/06/12 16:10:55.382 Executor task launch worker-2 INFO ZooKeeper: Client environment:host.name=ubuntu.ubuntu-domain
+15/06/12 16:10:55.382 Executor task launch worker-2 INFO ZooKeeper: Client environment:java.version=1.7.0_79
+15/06/12 16:10:55.382 Executor task launch worker-2 INFO ZooKeeper: Client environment:java.vendor=Oracle Corporation
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:java.home=/usr/lib/jvm/jdk1.7.0_79/jre
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:java.class.path=/home/crazydog/workspace/Spark test/bin:/home/crazydog/workspace/SparkOnHBase/target/spark-hbase-0.0.2-clabs.jar:/home/crazydog/workspace/SparkOnHBase/target/SparkHBase.jar:/usr/local/titan-0.5.4-hadoop2/lib/titan-core-0.5.4.jar:/usr/local/titan-0.5.4-hadoop2/lib/titan-hadoop-0.5.4.jar:/home/crazydog/Downloads/jsr166e-1.1.0.jar:/home/crazydog/Downloads/guava-18.0.jar:/home/crazydog/Downloads/cassandra-clientutil-2.2.0-beta1.jar:/home/crazydog/Downloads/google-api-client-repackaged-com-google-common-base-1.2.3-alpha.jar:/home/crazydog/Downloads/joda-time-2.8.jar:/home/crazydog/Downloads/spark-cassandra-connector_2.10-1.2.1.jar:/home/crazydog/Downloads/cassandra-thrift-2.2.0-beta1.jar:/home/crazydog/Downloads/cassandra-driver-core-2.1.6.jar:/home/crazydog/Downloads/spark-cassandra-connector_2.11-1.2.1.jar:/home/crazydog/spark-1.2.2-bin-hadoop2.4/lib/spark-assembly-1.2.2-hadoop2.4.0.jar
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:java.io.tmpdir=/tmp
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:java.compiler=<NA>
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:os.name=Linux
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:os.arch=amd64
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:os.version=3.13.0-32-generic
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:user.name=crazydog
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:user.home=/home/crazydog
+15/06/12 16:10:55.383 Executor task launch worker-2 INFO ZooKeeper: Client environment:user.dir=/home/crazydog/workspace/Spark test
+15/06/12 16:10:55.384 Executor task launch worker-2 INFO ZooKeeper: Initiating client connection, connectString=localhost:2181 sessionTimeout=90000 watcher=hconnection-0x1560eb09, quorum=localhost:2181, baseZNode=/hbase
+15/06/12 16:10:55.384 Executor task launch worker-0 INFO ZooKeeper: Initiating client connection, connectString=localhost:2181 sessionTimeout=90000 watcher=hconnection-0xde6a6d6, quorum=localhost:2181, baseZNode=/hbase
+15/06/12 16:10:55.384 Executor task launch worker-1 INFO ZooKeeper: Initiating client connection, connectString=localhost:2181 sessionTimeout=90000 watcher=hconnection-0x4e16230e, quorum=localhost:2181, baseZNode=/hbase
+15/06/12 16:10:55.384 Executor task launch worker-3 INFO ZooKeeper: Initiating client connection, connectString=localhost:2181 sessionTimeout=90000 watcher=hconnection-0x21d332bb, quorum=localhost:2181, baseZNode=/hbase
+15/06/12 16:10:55.411 Executor task launch worker-2-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:55.415 Executor task launch worker-2-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:55.417 Executor task launch worker-3-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:55.418 Executor task launch worker-0-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:55.418 Executor task launch worker-3-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:55.418 Executor task launch worker-1-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:55.419 Executor task launch worker-1-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:55.419 Executor task launch worker-0-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:55.525 Executor task launch worker-1 WARN RecoverableZooKeeper: Possibly transient ZooKeeper, quorum=localhost:2181, exception=org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+15/06/12 16:10:55.526 Executor task launch worker-0 WARN RecoverableZooKeeper: Possibly transient ZooKeeper, quorum=localhost:2181, exception=org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+15/06/12 16:10:55.526 Executor task launch worker-1 INFO RetryCounter: Sleeping 1000ms before retry #0...
+15/06/12 16:10:55.525 Executor task launch worker-2 WARN RecoverableZooKeeper: Possibly transient ZooKeeper, quorum=localhost:2181, exception=org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+15/06/12 16:10:55.529 Executor task launch worker-3 WARN RecoverableZooKeeper: Possibly transient ZooKeeper, quorum=localhost:2181, exception=org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+15/06/12 16:10:55.526 Executor task launch worker-0 INFO RetryCounter: Sleeping 1000ms before retry #0...
+15/06/12 16:10:55.529 Executor task launch worker-3 INFO RetryCounter: Sleeping 1000ms before retry #0...
+15/06/12 16:10:55.529 Executor task launch worker-2 INFO RetryCounter: Sleeping 1000ms before retry #0...
+15/06/12 16:10:56.522 Executor task launch worker-3-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:56.522 Executor task launch worker-2-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:56.522 Executor task launch worker-0-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:56.522 Executor task launch worker-1-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:56.522 Executor task launch worker-0-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:56.522 Executor task launch worker-3-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:56.522 Executor task launch worker-1-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:56.522 Executor task launch worker-2-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:56.623 Executor task launch worker-0 WARN RecoverableZooKeeper: Possibly transient ZooKeeper, quorum=localhost:2181, exception=org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+15/06/12 16:10:56.623 Executor task launch worker-3 WARN RecoverableZooKeeper: Possibly transient ZooKeeper, quorum=localhost:2181, exception=org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+15/06/12 16:10:56.623 Executor task launch worker-0 INFO RetryCounter: Sleeping 2000ms before retry #1...
+15/06/12 16:10:56.623 Executor task launch worker-1 WARN RecoverableZooKeeper: Possibly transient ZooKeeper, quorum=localhost:2181, exception=org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+15/06/12 16:10:56.623 Executor task launch worker-1 INFO RetryCounter: Sleeping 2000ms before retry #1...
+15/06/12 16:10:56.623 Executor task launch worker-3 INFO RetryCounter: Sleeping 2000ms before retry #1...
+15/06/12 16:10:56.623 Executor task launch worker-2 WARN RecoverableZooKeeper: Possibly transient ZooKeeper, quorum=localhost:2181, exception=org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+15/06/12 16:10:56.623 Executor task launch worker-2 INFO RetryCounter: Sleeping 2000ms before retry #1...
+15/06/12 16:10:57.623 Executor task launch worker-0-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:57.623 Executor task launch worker-1-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:57.624 Executor task launch worker-2-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:57.624 Executor task launch worker-1-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:57.623 Executor task launch worker-3-SendThread(localhost:2181) INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+15/06/12 16:10:57.624 Executor task launch worker-2-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:57.624 Executor task launch worker-0-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+15/06/12 16:10:57.625 Executor task launch worker-3-SendThread(localhost:2181) WARN ClientCnxn: Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)

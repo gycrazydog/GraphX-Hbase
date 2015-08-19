@@ -20,7 +20,7 @@ import scala.collection.JavaConverters._
 object SparkOnHbaseTest {
   def main(args : Array[String]){
     // Nothing to see here just creating a SparkContext like you normally would
-  val sparkConf = new SparkConf().setAppName("first spark app!").setMaster("local[2]")
+  val sparkConf = new SparkConf().setAppName("first spark app!").setMaster("local[4]")
   val sc = new SparkContext(sparkConf)
   println("after=enter!!!!")
   val columnFamily = "Cells"
