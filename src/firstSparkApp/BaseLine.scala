@@ -54,7 +54,7 @@ object SparkReadHbase {
                         .joinWithCassandraTable(keyspace,tableName)
                         .where("label IN "+labelset)
                         .filter(tuple=>tuple._1.edge.attr.equals( tuple._2.get[String]("label") ) )
-                        .flatMap(row=>row._2.get[String]("dstid").split(":").map(v=>(row._1.edge.dstId,v.toLong)) )
+                        .flatMap(row=>row._2.get[String]("dstid").split(":").map(v=>(row._1.edge.dstId,v.split("-")(0).toLong)) )
                         .subtract(visitedStates)
                         //.filter(!visitedStates.contains(_))
                         .distinct()

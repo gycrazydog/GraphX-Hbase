@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="firstSparkApp/FirstSpark.scala|firstSparkApp/MyPartitioner.scala|firstSparkApp/MyPartitionStrategy.scala|firstSparkApp/SparkOnHbaseTest.scala" kind="src" path="src"/>
+	<classpathentry excluding="firstSparkApp/FirstSpark.scala|firstSparkApp/MyPartitioner.scala|firstSparkApp/SparkOnHbaseTest.scala" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/CDC-1.0%Foundation-1.0"/>
 	<classpathentry kind="lib" path="/usr/local/titan-0.5.4-hadoop2/lib/titan-core-0.5.4.jar"/>
 	<classpathentry kind="lib" path="/usr/local/titan-0.5.4-hadoop2/lib/titan-hadoop-0.5.4.jar"/>

@@ -13,7 +13,7 @@ import org.apache.spark.graphx.PartitionStrategy._
 object GraphReader {
     def automata(sc : SparkContext,path : String) : Graph[Any,String] = {
      val rdd = sc.textFile(path, 3).cache()
-     val max_id = rdd.filter(line=>line.split(" ").size==1).map(_.toLong).toArray()(0)
+     val max_id = rdd.filter(line=>line.split(" ").size<=2).map(line=>line.split(" ")).toArray()(0)(0).toInt
      val states : RDD[(VertexId,(Any))]= sc.parallelize(1L to max_id,1).cartesian(sc.parallelize(Array(()), 1))
       val trans = rdd.filter(line=>line.split(" ").size==3).map(line=>{
         val edge = line.split(" ")
@@ -23,6 +23,12 @@ object GraphReader {
       val graph = Graph(states, trans,defaultUser)
       graph
   }
+    def getStartNode(sc : SparkContext,path : String) : Long = {
+      val rdd = sc.textFile(path, 3).cache()
+      val startnode = rdd.filter(line=>line.split(" ").size==2)
+                          .map(line=>line.split(" ")).toArray()(0)(1).toInt
+      startnode
+    }
     def firstEdges(sc:SparkContext,keyspace: String,tableName: String,Columns : Array[String]) : RDD[(VertexId,String)] = {
       println("enter getEdges!!")
       val labelset = "("+Columns.map(v=>"'"+v+"'").mkString(",")+")"
