@@ -348,8 +348,8 @@ object JabeJa {
     sparkMaster = args(1)  
     val output_path = args(2)
     val function = args(3)
-      val sparkConf = new SparkConf().setAppName("JabeJa : ").setMaster(sparkMaster)
-      val sc = new SparkContext(sparkConf)
+    val sparkConf = new SparkConf().setAppName("JabeJa : ").setMaster(sparkMaster)
+    val sc = new SparkContext(sparkConf)
 //    JabeJa_Local
 //    JabeJa_Random
     var initColor = (List.fill(17032)(0)++(List.fill(17326)(1))++(List.fill(17692)(2)))
